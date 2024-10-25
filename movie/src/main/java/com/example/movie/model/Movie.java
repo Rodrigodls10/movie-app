@@ -1,6 +1,5 @@
 package com.example.movie.model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,8 +14,17 @@ public class Movie {
     private String description;
     private String genre;
 
-    // Getters y setters
+    public Movie() {
+    }
 
+    public Movie(Long id, String title, String description, String genre) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.genre = genre;
+    }
+
+    // Getters y setters
     public Long getId() {
         return id;
     }
@@ -49,15 +57,5 @@ public class Movie {
         this.genre = genre;
     }
 
-    // Constructor por defecto y parametrizado
 
-    public Movie() {
-    }
-
-    public Movie(Long id, String title, String description, String genre) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.genre = genre;
-    }
 }

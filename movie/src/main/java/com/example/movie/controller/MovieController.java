@@ -19,6 +19,6 @@ public class MovieController {
     public String viewMovies(Model model) {
         List<Movie> movies = movieRepository.findAll();
         model.addAttribute("movies", movies);
-        return "index";
+        return "index"; // Devuelve la vista "index"
     }
 }

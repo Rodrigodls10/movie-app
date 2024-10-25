@@ -1,6 +1,5 @@
 package com.example.movie.model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,11 +10,14 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String username;
     private String password;
 
-    // Getters y setters
+    // Constructor vacío requerido por JPA
+    public User() {}
 
+    // Getters y setters
     public Long getId() {
         return id;
     }
@@ -37,17 +39,6 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
-    }
-
-    // Constructor por defecto y parametrizado
-
-    public User() {
-    }
-
-    public User(Long id, String username, String password) {
-        this.id = id;
-        this.username = username;
         this.password = password;
     }
 }

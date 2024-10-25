@@ -1,0 +1,18 @@
+body {
+    background-color: #1a1a1a; /* Negro oscuro */
+    color: #eaeaea;            /* Blanco suave */
+}
+
+.text-violet {
+    color: #8a2be2; /* Violeta */
+}
+
+.btn-outline-violet {
+    border-color: #8a2be2;
+    color: #8a2be2;
+}
+
+.btn-outline-violet:hover {
+    background-color: #8a2be2;
+    color: #ffffff;
+}
