@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Películas</title>
+</head>
+<body>
+<h1>Películas Disponibles</h1>
+<ul>
+    <li th:each="movie : ${movies}">
+        <strong th:text="${movie.title}"></strong>: <span th:text="${movie.description}"></span>
+    </li>
+</ul>
+<a href="/login">Iniciar sesión</a>
+</body>
+</html>
