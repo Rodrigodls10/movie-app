@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -14,8 +14,8 @@ public class User {
     private String username;
     private String password;
 
-    // Constructor vacío requerido por JPA
-    public User() {}
+
+    public Users() {}
 
     // Getters y setters
     public Long getId() {
