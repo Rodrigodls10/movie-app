@@ -15,7 +15,6 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-
     @GetMapping("/login")
     public String showLoginForm(Model model) {
         model.addAttribute("user", new Users());
@@ -25,10 +24,10 @@ public class UserController {
     @PostMapping("/login")
     public String loginUser(@ModelAttribute Users user, Model model) {
         Users foundUser = userRepository.findByUsername(user.getUsername());
-        if (foundUser != null) {
+        if (foundUser != null && foundUser.getPassword().equals(user.getPassword())) {
             return "redirect:/";
         }
-        model.addAttribute("error", "Invalid username or password");
+        model.addAttribute("error", "Usuario o contraseña inválidos");
         return "login";
     }
 
@@ -41,13 +40,14 @@ public class UserController {
     @PostMapping("/register")
     public String registerUser(@ModelAttribute Users user, Model model) {
         if (userRepository.findByUsername(user.getUsername()) != null) {
-            model.addAttribute("error", "Username already exists");
-            return "register"; // Regresar al formulario de registro
+            model.addAttribute("error", "El nombre de usuario ya existe");
+            return "register";
         }
         userRepository.save(user);
         return "redirect:/login";
     }
 }
+
 
 
 

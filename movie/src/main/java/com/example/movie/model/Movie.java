@@ -1,27 +1,28 @@
 package com.example.movie.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "movie" , uniqueConstraints = @UniqueConstraint(columnNames = "title"))
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String title;
     private String description;
     private String genre;
+    private String imageUrl; // Nueva propiedad para la URL de la imagen
 
     public Movie() {
     }
 
-    public Movie(Long id, String title, String description, String genre) {
-        this.id = id;
+    public Movie(String title, String description, String genre, String imageUrl) {
+
         this.title = title;
         this.description = description;
         this.genre = genre;
+        this.imageUrl = imageUrl;
     }
 
     // Getters y setters
@@ -57,5 +58,12 @@ public class Movie {
         this.genre = genre;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
 
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 }
+
