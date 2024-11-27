@@ -1,0 +1,40 @@
+body {
+    background-color: #1e1e2f; /* Fondo negro suave */
+    color: #ffffff; /* Texto blanco */
+}
+
+.navbar {
+    background-color: #6a0dad; /* Tono violeta */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #d1b3ff !important; /* Violeta claro */
+}
+
+.card {
+    background-color: #2e2e3e; /* Negro grisáceo */
+    border: 1px solid #6a0dad;
+    color: #ffffff;
+}
+
+.card-title {
+    color: #d1b3ff; /* Violeta claro */
+}
+
+.btn-primary {
+    background-color: #6a0dad;
+    border-color: #6a0dad;
+}
+
+.btn-primary:hover {
+    background-color: #8a2be2; /* Violeta más brillante */
+    border-color: #8a2be2;
+}
+
+.container h1 {
+    color: #d1b3ff; /* Violeta claro */
+}
