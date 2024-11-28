@@ -6,28 +6,7 @@ import com.example.movie.repository.MovieRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-//
-//@Component
-//public class DataInitializer {
-//    @Autowired
-//    private MovieRepository movieRepository;
-//
-//    @PostConstruct
-//    public void initializeData() {
-//        addMovieIfNotExists("Matrix", "Ciencia ficción", "imagen_matrix.jpg");
-//        addMovieIfNotExists("Avatar", "Fantasía", "imagen_avatar.jpg");
-//        addMovieIfNotExists("Inception", "Acción", "imagen_inception.jpg");
-//    }
-//
-//    private void addMovieIfNotExists(String title, String genre, String imageUrl) {
-//        if (!movieRepository.existsByTitle(title)) {
-//            movieRepository.save(new Movie (title, genre, imageUrl));
-//            System.out.println("Película añadida: " + title);
-//        } else {
-//            System.out.println("Película ya existente: " + title);
-//        }
-//    }
-//}
+
 @Component
 public class DataInitializer {
     @Autowired
