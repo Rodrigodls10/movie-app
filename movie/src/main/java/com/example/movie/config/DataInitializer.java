@@ -15,7 +15,7 @@ public class DataInitializer {
     @PostConstruct
     public void initializeData() {
         addMovieIfNotExists("Matrix", "Una película de ciencia ficción revolucionaria.", "Ciencia ficción", "/images/matrix.jpg");
-        addMovieIfNotExists("Avatar", "Un viaje a un mundo lleno de maravillas.", "Fantasía", "/images/avatar.jpg");
+        addMovieIfNotExists("Avatar The way of water", "Un viaje a un mundo lleno de maravillas.", "Fantasía", "/images/avatar.jpg");
         addMovieIfNotExists("El señor de los anillos", "Explorando los sueños dentro de sueños.", "Acción", "images/elSeñordelosAnillos.jpg");
     }
 

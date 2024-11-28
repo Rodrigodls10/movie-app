@@ -22,8 +22,8 @@ public class DataLoader implements CommandLineRunner {
             movieRepository.save(new Movie("El Señor de los Anillos", "Una épica aventura en la Tierra Media", "Fantasía", "/images/elSeñordelosAnillos.jpg"));
         }
 
-        if (!movieRepository.existsByTitle("Avatar")) {
-            movieRepository.save(new Movie("Avatar", "Un mundo alienígena y visualmente impactante", "Ciencia Ficción", "/images/Avatar.jpg"));
+        if (!movieRepository.existsByTitle("Avatar The way of water")) {
+            movieRepository.save(new Movie("Avatar The way of water", "Un mundo alienígena y visualmente impactante", "Ciencia Ficción", "/images/avatar.jpg"));
         }
     }
 }
